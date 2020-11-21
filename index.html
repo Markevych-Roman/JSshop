@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="icons/icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="components/Authorization/styles.css">
+    <link rel="stylesheet" href="components/Cart/styles.css">
+    <link rel="stylesheet" href="components/ProductDetails/styles.css">
+    <link rel="stylesheet" href="components/Catalog/styles.css">
+    <link rel="stylesheet" href="components/DataProcessing/style.css">
+    <title>Online Shop</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <a href="#" class="navbar_logo"><img src="components/Authorization/logo.png" alt=""></a>
+            <div id="navbar_nav">
+                <div class="navbar_block">
+                    <a class="navbar_category" id="all">All Goods</a>
+                    <a class="navbar_category" id="men clothing">Men</a>
+                    <a class="navbar_category" id="women clothing">Women</a>
+                    <a class="navbar_category" id="electronics">Electronics</a>
+                    <a class="navbar_category" id="jewelery">Jewelry</a>
+                </div>
+                <div class="navbar_block">
+                    <button id="open_auth" class="btn"></button>
+                </div>
+            </div>
+            <div class="navbar_burger">
+                <span></span>
+            </div>
+        </nav>
+        <div class="cart"></div>
+    </header>
+    <main>
+        <div class="search-bar">
+            <input class="search-bar__input" type="text" placeholder="Type here to search">
+            <span class="search-bar__icon-close">&times;</span>
+        </div>
+        <div class="catalog"></div>
+        <div class="authorization">
+            <div class="modal">
+                <h1 class="heading">login</h1>
+                <form id="form">
+                    <label for="form_username">Username</label>
+                    <input type="text" name="username" id="form_username" class="form_input" required>
+                    <label for="form_password">Password</label>
+                    <input type="password" name="password" id="form_password" class="form_input" required>
+                    <div class="invalid-feedback">Invalid username or password</div>
+                    <div id="form_btns">
+                        <button type="submit" id="authLogin" class="btn">Login</button>
+                        <button id="authClose" class="btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="apiClient/fakeStoreAPI.js"></script>
+    <script src="localStorage/localStorage.js"></script>
+    <script src="components/DataProcessing/script.js"></script>
+    <script src="components/Authorization/script.js"></script>
+    <script src="components/Cart/script.js"></script>
+    <script src="components/ProductDetails/script.js"></script>
+    <script src="components/Catalog/script.js"></script>
+</body>
+
+</html>
